@@ -52,10 +52,8 @@ class AvocadoAPI(object):
     # Ask the user for all of the necessary authentication info
     self.auth_client.email = raw_input("Email of an Avocado account: ")
     self.auth_client.password = getpass.getpass()
-    #self.auth_client.dev_id = int(raw_input("Developer ID: "))
-    #self.auth_client.dev_key = raw_input("Developer key: ")
-    self.auth_client.dev_id = 81
-    self.auth_client.dev_key = "7UZiE6na8htEm1f2HhqimSQyX213pgmQjEvxiGnvpzccvE+GDiMrZ/1v9RlfPKFY"
+    self.auth_client.dev_id = int(raw_input("Developer ID: "))
+    self.auth_client.dev_key = raw_input("Developer key: ")
 
     self.auth_client.update_signature()
     if self.auth_client.dev_signature is None:
